@@ -33,7 +33,7 @@ const Features = () => {
                
                 </div>
 
-                <div className="w-full mt-10 gap-6 inline-flex flex-col" >
+                <div className="w-full mt-20 gap-6 inline-flex flex-col" >
                          <div className="w-full flex items-stretch justify-between flex-col md:flex-row gap-6 " >
                         <FeaturesCard imageSrc={Feature1} title="Total operational visibility" description="Track your money with real-time transaction monitoring. Resolve network issues before they affect customers." className="" />
                         <FeaturesCard imageSrc={Feature2} title="Optimized for speed and cost" description="Our algorithm finds the best path for transfers, protecting profit margins and ensuring users receive funds instantly." />

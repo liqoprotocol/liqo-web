@@ -1,4 +1,5 @@
 import Features from "@/components/sections/features"
+import HowItWorks from "@/components/sections/how-it-works"
 import Hero from "@/components/ui/hero"
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       >
         <Hero />
         <Features />
+        <HowItWorks />
       </div>
     </>
   )
