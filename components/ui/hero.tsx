@@ -5,7 +5,7 @@ import { Button } from "./button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen ">
+    <section className="relative min-h-screen">
       <Image
         src={BG}
         alt=""

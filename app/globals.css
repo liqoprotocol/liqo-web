@@ -252,6 +252,9 @@ body {
 .liquid-glass:hover .liquid-glass-specular {
   opacity: 1;
 }
+
+
+
 ::-webkit-scrollbar {
   width: 6px;
 }

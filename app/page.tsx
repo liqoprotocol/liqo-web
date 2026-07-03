@@ -1,3 +1,4 @@
+import Features from "@/components/sections/features"
 import Hero from "@/components/ui/hero"
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         className="w-full min-h-full overflow-hidden relative"
       >
         <Hero />
+        <Features />
       </div>
     </>
   )
