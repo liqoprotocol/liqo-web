@@ -1,3 +1,4 @@
+import DeveloperExperience from "@/components/sections/developer-experience"
 import Features from "@/components/sections/features"
 import HowItWorks from "@/components/sections/how-it-works"
 import Hero from "@/components/ui/hero"
@@ -11,6 +12,7 @@ const Home = () => {
         <Hero />
         <Features />
         <HowItWorks />
+        <DeveloperExperience />
       </div>
     </>
   )
