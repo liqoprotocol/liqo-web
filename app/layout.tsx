@@ -30,10 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased ${outfit.className} font-sans`}
-    >
+<html
+    lang="en"
+    className={`h-full antialiased ${outfit.variable} font-sans`}
+>
       <body className="min-h-full flex flex-col pt-10 relative pb-30">
         <Navbar />
         {children}</body>

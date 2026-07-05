@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import LiquidGlassFilter from "./liquid-glass-filter";
 import { useRef } from "react";
 import { Button } from "./button";
+import MobileNavbar from "./mobile-navbar";
 const Navbar = () => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -75,40 +76,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-const MobileNavbar = () => {
-  return (
-    <div
-      className="w-full h-16
-            px-5 relative md:px-14
-            lg:hidden"
-    >
-      <nav
-        className="w-full h-full
-                relative
-            flex flex-row items-center justify-between
-            "
-      >
-        <Image src={LogoWithText} alt="Logo" className="h-full w-24" />
-        {/* 
-        <div className="bg-white/20 backdrop-blur-xl border w-10 h-10 flex items-center justify-center border-white/5 rounded-xl">
-          <Menu color="#fff" />
-        </div> */}
-
-        <div
-          className="
-        w-10 h-10
-        rounded-xl
-        flex items-center justify-center
-        bg-[oklch(1_0_0/.2)]
-        border border-[oklch(1_0_0/.05)]
-        backdrop-blur-xl
-        shadow-lg
-        lg:hidden
-        "
-        >
-          <Menu color="#fff" size={24} />
-        </div>
-      </nav>
-    </div>
-  );
-};
