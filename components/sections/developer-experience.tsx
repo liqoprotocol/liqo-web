@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 const DeveloperExperience = () => {
     return (
         <>
-            <div className={"w-full mt-20 bg-[#0368F4] py-10 px-6 lg:px-28 lg:py-28"} >
+            <div className={"w-full mt-20 bg-[#0368F4] py-10 px-6 lg:px-28 lg:py-28 lg:mt-40"} >
                 <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:gap-28">
                     <div className={"w-full lg:w-1/2"} >
                         <Chip text="Developer Experience" className="bg-[#FFFFFF1A]" />
