@@ -24,7 +24,7 @@ const snippetIn: Variants = {
 
 const DeveloperExperience = () => {
   return (
-    <div className="w-full mt-20 bg-[#0368F4] py-10 px-5 md:px-10 md:py-16 xl:px-28 xl:py-28 lg:mt-40 overflow-hidden">
+    <section id="developer-experience" aria-label="Developer Experience" className="w-full mt-20 bg-[#0368F4] py-10 px-5 md:px-10 md:py-16 xl:px-28 xl:py-28 lg:mt-40 overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -40,13 +40,13 @@ const DeveloperExperience = () => {
             <Chip text="Developer Experience" className="bg-[#FFFFFF1A]" />
           </motion.div>
 
-          <motion.p
+          <motion.h2
             variants={rise}
             className="text-white text-2xl font-semibold mt-3 text-left md:text-3xl lg:text-4xl xl:text-5xl"
           >
             A Seamless Space for <br className="hidden xl:block" />
             Your Engineering Team.
-          </motion.p>
+          </motion.h2>
 
           <motion.p
             variants={rise}
@@ -77,12 +77,12 @@ const DeveloperExperience = () => {
         >
           <Image
             src={CodeSnippet}
-            alt="Code Snippet"
+            alt="Liqo API code snippet for routing a cross-border payment"
             className="w-full h-auto"
           />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

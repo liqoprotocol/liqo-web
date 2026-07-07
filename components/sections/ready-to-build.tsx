@@ -12,7 +12,7 @@ const rise: Variants = {
 
 const ReadyToBuild = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-[#0A0A0A] min-h-80 lg:min-h-[60vh] mt-20 lg:mt-30">
+    <section id="ready-to-build" aria-label="Ready to Build" className="relative w-full overflow-hidden bg-[#0A0A0A] min-h-80 lg:min-h-[60vh] mt-20 lg:mt-30">
       <LiquidHeroBg
         src="/ready-to-build-image.svg"
         className="hidden md:block absolute top-0 right-0 h-full w-[55%]"
@@ -34,14 +34,14 @@ const ReadyToBuild = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="w-full md:w-[45%]"
         >
-          <motion.h3
+          <motion.h2
             variants={rise}
             className="text-3xl font-semibold text-white lg:text-4xl text-left"
           >
             Ready to build for
             <br />
             Global Scale?
-          </motion.h3>
+          </motion.h2>
           <motion.p variants={rise} className="text-[#D5D5D5] mt-2 leading-6 lg:text-base">
             Expand your business globally without massive engineering effort to
             untangle local banking rules. We handle complexities behind the
@@ -61,7 +61,7 @@ const ReadyToBuild = () => {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

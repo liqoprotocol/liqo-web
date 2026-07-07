@@ -54,7 +54,7 @@ const MobileNavbar = () => {
                 ? "bg-[#0D0D0D]/85 backdrop-blur-xl border-b border-white/10 shadow-lg"
                 : "bg-transparent border-b border-transparent"}`}>
             <nav className="w-full h-16 relative flex flex-row items-center justify-between">
-                <Image src={LogoWithText} alt="Logo" className="h-full w-24" />
+                <Image src={LogoWithText} alt="Logo" className="h-full w-24" priority />
 
                 <button
                     onClick={() => setOpen((v) => !v)}

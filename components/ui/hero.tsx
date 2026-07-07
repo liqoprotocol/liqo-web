@@ -78,7 +78,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div className="w-full">
-            <motion.p
+            <motion.h1
               variants={headlineContainer}
               className="text-white text-2xl capitalize md:text-5xl md:px-10 lg:px-0 font-semibold"
               aria-label={headline}
@@ -94,7 +94,7 @@ const Hero = () => {
                   {i < headline.split(" ").length - 1 && "\u00A0"}
                 </motion.span>
               ))}
-            </motion.p>
+            </motion.h1>
             <motion.p
               variants={item}
               className="text-sm text-gray-400 md:text-xl md:px-10 lg:px-0 mt-4"

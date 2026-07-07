@@ -38,7 +38,7 @@ const cards = [
 
 const Features = () => {
     return (
-        <div className="w-full mt-16 px-5 md:px-10 xl:px-28">
+        <section id="features" aria-label="Features" className="w-full mt-16 px-5 md:px-10 xl:px-28">
             <motion.div
                 variants={headerContainer}
                 initial="hidden"
@@ -51,9 +51,9 @@ const Features = () => {
 
                 <div className="w-full flex flex-col gap-5 mt-5 lg:flex-row lg:gap-10 lg:items-start lg:justify-between">
                     <motion.div variants={rise} className="w-full flex flex-col gap-2 lg:w-[55%]">
-                        <p className="text-white text-xl font-semibold md:text-3xl lg:text-4xl xl:text-5xl xl:pr-24">
+                        <h2 className="text-white text-xl font-semibold md:text-3xl lg:text-4xl xl:text-5xl xl:pr-24">
                             Powerful Infrastructure for Global Scale
-                        </p>
+                        </h2>
                     </motion.div>
                     <motion.div variants={rise} className="w-full flex flex-col gap-2 lg:w-[40%]">
                         <p className="text-gray-400 text-sm font-semibold">
@@ -88,7 +88,7 @@ const Features = () => {
                     </motion.div>
                 ))}
             </motion.div>
-        </div>
+        </section>
     );
 };
 

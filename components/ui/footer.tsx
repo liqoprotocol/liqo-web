@@ -48,9 +48,9 @@ const Footer = () => {
               </h3>
 
               <ul className="space-y-4 text-sm text-white/70">
-                <li><Link href="#">Features</Link></li>
-                <li><Link href="#">How It Works</Link></li>
-                <li><Link href="#">Use Case</Link></li>
+                <li><Link href="#features">Features</Link></li>
+                <li><Link href="#how-it-works">How It Works</Link></li>
+                <li><Link href="#use-case">Use Case</Link></li>
               </ul>
             </div>
 
@@ -129,9 +129,9 @@ const Footer = () => {
               </h3>
 
               <ul className="space-y-4 text-base md:text-lg text-white/70">
-                <li><Link href="#">Features</Link></li>
-                <li><Link href="#">How It Works</Link></li>
-                <li><Link href="#">Use Case</Link></li>
+                <li><Link href="#features">Features</Link></li>
+                <li><Link href="#how-it-works">How It Works</Link></li>
+                <li><Link href="#use-case">Use Case</Link></li>
               </ul>
             </div>
 

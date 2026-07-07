@@ -43,7 +43,7 @@ const list: FinancialVisibiltyCardProps[] = [
 
 const FinancialVisibilty = () => {
     return (
-        <div className="w-full mt-80 px-5 md:px-10 xl:px-28">
+        <section id="financial-visibility" aria-label="Financial Visibility" className="w-full mt-80 px-5 md:px-10 xl:px-28">
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -51,9 +51,9 @@ const FinancialVisibilty = () => {
                 variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
                 className="w-full flex flex-col gap-5 mt-5"
             >
-                <motion.p variants={rise} className="text-white text-2xl font-semibold text-center lg:text-5xl">
+                <motion.h2 variants={rise} className="text-white text-2xl font-semibold text-center lg:text-5xl">
                     Complete Financial Visibility.
-                </motion.p>
+                </motion.h2>
                 <motion.p variants={rise} className="text-[#D5D5D5] text-sm font-semibold text-center lg:text-base">
                     Monitor transactions, manage conversions, and track<br />your global revenue from a single, powerful interface.
                 </motion.p>
@@ -90,9 +90,9 @@ const FinancialVisibilty = () => {
                 variants={screenshotIn}
                 className="w-full mt-10 lg:mt-16"
             >
-                <Image src={OverViewImage} alt="overview-screenshot" className="w-full h-auto" />
+                <Image src={OverViewImage} alt="Liqo dashboard overview showing transactions, conversions, and revenue" className="w-full h-auto" />
             </motion.div>
-        </div>
+        </section>
     );
 };
 

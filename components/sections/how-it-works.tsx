@@ -35,7 +35,7 @@ const list: HowItWorksCardProps[] = [
 ];
 const HowItWorks = () => {
   return (
-    <div className="w-full mt-40 px-5 md:px-16 lg:px-28">
+    <section id="how-it-works" aria-label="How It Works" className="w-full mt-40 px-5 md:px-16 lg:px-28">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -45,12 +45,12 @@ const HowItWorks = () => {
         <motion.div variants={rise} className="w-full flex items-center justify-center">
           <Chip text="How It Works" />
         </motion.div>
-        <motion.p
+        <motion.h2
           variants={rise}
           className="text-white text-2xl font-semibold text-center lg:text-5xl mt-5"
         >
           The Anatomy of a<br />Frictionless Transfer
-        </motion.p>
+        </motion.h2>
       </motion.div>
 
       <div className="w-full flex flex-col lg:w-[80%] mx-auto mt-12 lg:mt-20 gap-20">
@@ -58,7 +58,7 @@ const HowItWorks = () => {
           <HowItWorksCard key={index} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 export default HowItWorks;

@@ -19,7 +19,7 @@ const Navbar = () => {
     el.style.setProperty("--my", `${y}%`);
   };
   return (
-    <>
+    <header>
       <LiquidGlassFilter />
       <MobileNavbar />
 
@@ -36,22 +36,23 @@ const Navbar = () => {
                             }`}
       >
         <div className="liquid-glass-specular fixed" />
-        <div className="flex gap-10  flex-row items-center justify-between  h-full">
+        <nav aria-label="Primary" className="flex gap-10  flex-row items-center justify-between  h-full">
           <Image
             src={LogoWithText}
-            alt="Logo"
+            alt="Liqo"
+            priority
             className="w-30 h-auto relative z-10"
           />
           <ul className="flex flex-row items-center justify-between gap-10 text-gray-200 text-sm font-medium">
             <li className="cursor-pointer hover:text-primary-dark">
-              Developers
+              <a href="#developer-experience">Developers</a>
             </li>
             <li className="cursor-pointer hover:text-primary-dark">
               Resources
             </li>
             <li className="cursor-pointer hover:text-primary-dark">Pricing</li>
           </ul>
-        </div>
+        </nav>
 
         <div className="flex flex-row items-center justify-between gap-5">
           <Button className="bg-[#4D4D4D] py-5 cursor-pointer px-4 text-white hover:bg-[#333] hover:text-white transition-all duration-300">
@@ -62,7 +63,7 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
-    </>
+    </header>
   );
 };
 

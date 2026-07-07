@@ -28,23 +28,25 @@ const frontHoodie: Variants = {
 const CARD_GRADIENT =
   "relative h-full flex flex-col justify-between min-h-[26rem] xl:min-h-[30rem] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-[#0B0B0B] bg-[radial-gradient(ellipse_72%_42%_at_50%_42%,rgba(34,121,182,0.32)_0%,rgba(1,81,139,0.18)_40%,rgba(1,81,139,0.06)_60%,transparent_78%),linear-gradient(to_bottom,#0B0B0B_0%,#0B0B0B_42%,rgba(1,81,139,0.1)_55%,rgba(1,81,139,0.3)_70%,rgba(116,240,198,0.18)_84%,rgba(56,246,132,0.22)_94%,rgba(9,253,66,0.24)_100%)]";
 
-const list: UseCaseCardProps[] = [
+const list: (UseCaseCardProps & { alt: string })[] = [
   {
     title:
       "Accept payments in local currencies and digital wallets, settling in your preferred currency.",
     imageSrc: UseCaseImage1,
+    alt: "Corporate treasury dashboard showing multi-currency balances",
   },
   {
     title:
       "Automatically convert incoming funds into your preferred settlement currency to optimise treasury operations.",
     imageSrc: UseCaseImage2,
     customImageClassName: "w-full h-auto relative -bottom-[6%]",
+    alt: "Fiat account balance and currency conversion interface",
   },
 ];
 
 const UseCaseSection = () => {
   return (
-    <div className="w-full mt-40 px-5 md:px-10 xl:px-28">
+    <section id="use-case" aria-label="Use Case" className="w-full mt-40 px-5 md:px-10 xl:px-28">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -60,14 +62,14 @@ const UseCaseSection = () => {
         >
           <Chip text="Use case" />
         </motion.div>
-        <motion.p
+        <motion.h2
           variants={rise}
           className="text-white text-2xl font-semibold text-center lg:text-5xl mt-5"
         >
           One Platform For Every
           <br />
           Financial Workflow
-        </motion.p>
+        </motion.h2>
       </motion.div>
 
       <motion.div
@@ -91,7 +93,7 @@ const UseCaseSection = () => {
               <Image
                 className={item.customImageClassName ?? "w-full h-auto"}
                 src={item.imageSrc}
-                alt={`use-case-${i + 1}`}
+                alt={item.alt}
               />
             </Card>
           </motion.div>
@@ -118,19 +120,19 @@ const UseCaseSection = () => {
                 <Image
                   className="w-full h-auto"
                   src={UseCaseImage3}
-                  alt="use-case-3"
+                  alt="Liqo branded hoodie, front view"
                 />
               </motion.div>
               <Image
                 className="w-[80%] h-auto"
                 src={UseCaseImage4}
-                alt="use-case-4"
+                alt="Liqo branded hoodie, back view"
               />
             </div>
           </Card>
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
