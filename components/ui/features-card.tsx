@@ -18,13 +18,13 @@ const FeaturesCard = ({ imageSrc, title, description, className }: FeaturesCardP
         ${className}`}
             >
                 <Image
-                    className="w-full h-auto transition-transform duration-500 ease-out "
+                    className="w-full h-90 transition-transform duration-500 ease-out "
                     src={imageSrc}
                     alt={title}
                 />
-                <div className="p-4 mt-auto">
+                <div className="p-4 mt-auto gap-3 flex flex-col">
                     <h3 className="text-xl font-bold text-white">{title}</h3>
-                    <p className="text-gray-400">{description}</p>
+                    <p className="text-gray-400 relative lg:w-[60%] w-full">{description}</p>
                 </div>
             </Card>
         </>
