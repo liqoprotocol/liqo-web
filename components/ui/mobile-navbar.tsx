@@ -27,8 +27,16 @@ const itemVariants: Variants = {
 
 const MobileNavbar = () => {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const panelRef = useRef<HTMLDivElement>(null);
 
-    const panelRef = useRef<HTMLDivElement>(null);   // ← this
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 12);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
 
     useEffect(() => {
         if (!open) return;
@@ -40,7 +48,11 @@ const MobileNavbar = () => {
     }, [open]);
 
     return (
-        <div className="w-full px-5 md:px-14 fixed top-0 left-0 z-100 lg:hidden">
+        <div className={`w-full px-5 md:px-14 fixed top-0 left-0 z-100 lg:hidden
+                        transition-colors duration-300
+                        ${scrolled || open
+                ? "bg-[#0D0D0D]/85 backdrop-blur-xl border-b border-white/10 shadow-lg"
+                : "bg-transparent border-b border-transparent"}`}>
             <nav className="w-full h-16 relative flex flex-row items-center justify-between">
                 <Image src={LogoWithText} alt="Logo" className="h-full w-24" />
 
