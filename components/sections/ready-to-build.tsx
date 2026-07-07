@@ -15,7 +15,7 @@ const ReadyToBuild = () => {
     <section id="ready-to-build" aria-label="Ready to Build" className="relative w-full overflow-hidden bg-[#0A0A0A] min-h-80 lg:min-h-[60vh] mt-20 lg:mt-30">
       <LiquidHeroBg
         src="/ready-to-build-image.svg"
-        className="hidden md:block absolute top-0 right-0 h-full w-[55%]"
+        className="hidden md:block absolute top-0 right-0 h-full w-[40%]"
       />
       <LiquidHeroBg
         src="/ready-to-build-mobile.svg"

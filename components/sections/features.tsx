@@ -30,10 +30,10 @@ const gridContainer: Variants = {
 };
 
 const cards = [
-    { imageSrc: Feature1, title: "Total operational visibility", description: "Track your money with real-time transaction monitoring. Resolve network issues before they affect customers." },
-    { imageSrc: Feature2, title: "Optimized for speed and cost", description: "Our algorithm finds the best path for transfers, protecting profit margins and ensuring users receive funds instantly." },
-    { imageSrc: Feature3, title: "Built for rapid scale", description: "Move to production in days, not months. Test confidently in a simulated sandbox without using real funds." },
-    { imageSrc: Feature4, title: "Always-on global settlements", description: "Achieve one integration that avoids regional downtime. Traffic shifts seamlessly, ensuring uninterrupted operations." },
+    { imageSrc: Feature1, title: "Total operational visibility", description: `Track your money with real-time transaction monitoring.\nResolve network issues before they affect customers.` },
+    { imageSrc: Feature2, title: "Optimized for speed and cost", description: "Our algorithm finds the best path for transfers,protecting\nprofit margins and ensuring users receive funds instantly." },
+    { imageSrc: Feature3, title: "Built for rapid scale", description: "Move to production in days, not months. Test confidently in\na simulated sandbox without using real funds." },
+    { imageSrc: Feature4, title: "Always-on global settlements", description: "Achieve one integration that avoids regional downtime.\nTraffic shifts seamlessly, ensuring uninterrupted operations." },
 ];
 
 const Features = () => {
