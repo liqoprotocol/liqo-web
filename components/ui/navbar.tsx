@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 import LogoWithText from "../../public/logo-with-text.svg";
-import { Menu } from "lucide-react";
 import LiquidGlassFilter from "./liquid-glass-filter";
 import { useRef } from "react";
 import { Button } from "./button";
 import MobileNavbar from "./mobile-navbar";
+import { useScrolled } from "@/hooks/use-scrolled";
 const Navbar = () => {
   const ref = useRef<HTMLDivElement>(null);
-
+  const scrolled = useScrolled();
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const el = ref.current;
     if (!el) return;
@@ -26,24 +26,16 @@ const Navbar = () => {
       <div
         ref={ref}
         onMouseMove={handleMouseMove}
-        className="
-    liquid-glass
-    h-17
-    mx-auto
-    w-9/12
-    px-5
-    z-100
-    hidden
-    lg:flex
-    items-center
-    justify-between
-    fixed
-    top-3
-    left-0
-    right-0
-  "
+        className={`liquid-glass h-17 mx-auto w-9/12 px-5 z-100 hidden lg:flex
+                            items-center justify-between fixed left-0 right-0
+                            transition-all duration-300
+                            ${
+                              scrolled
+                                ? "top-3 bg-[#0A0A0A]/70 shadow-xl"
+                                : "top-10 bg-transparent"
+                            }`}
       >
-        <div className="liquid-glass-specular" />
+        <div className="liquid-glass-specular fixed" />
         <div className="flex gap-10  flex-row items-center justify-between  h-full">
           <Image
             src={LogoWithText}
@@ -75,4 +67,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

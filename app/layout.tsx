@@ -35,7 +35,7 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${outfit.variable} font-sans`}
     >
-      <body className="min-h-screen flex flex-col pt-10">
+      <body className="min-h-screen flex flex-col ">
         <Navbar />
 
         <main className="flex-1">

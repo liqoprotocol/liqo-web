@@ -1,25 +1,32 @@
-import Image from "next/image";
-import BG from "../../public/bg-logo.png";
-import BG2 from "../../public/bg-logo-2.png";
 import { Button } from "./button";
-
+import LiquidHeroBg from "./liquid-hero-bg";
+import BG from "@/public/hero-bg.svg";
 const Hero = () => {
   return (
-    <section className="relative min-h-screen">
-      <Image
+    <section className="relative min-h-screen ">
+      {/* <Image
         src={BG}
         alt=""
         fill
         priority
         className="hidden lg:block object-cover object-center top-30"
+      /> */}
+      <LiquidHeroBg
+        src={BG.src}
+        className="hidden lg:block absolute inset-0 w-full h-full"
       />
-      <Image
-        src={BG2}
-        alt=""
-        fill
-        priority
-        className="block lg:hidden object-cover object-center"
+      {/* mobile bg */}
+      <LiquidHeroBg
+        src="/hero-bg-mobile.svg"
+        className="block lg:hidden absolute inset-0 w-full h-full"
       />
+      {/* mobile text scrim */}
+      <div
+        className="lg:hidden absolute inset-0 pointer-events-none
+    bg-[radial-gradient(ellipse_75%_50%_at_50%_48%,rgba(10,10,10,0.95)_0%,rgba(10,10,10,0.7)_55%,transparent_100%)]"
+      />
+
+      {/* content div unchanged, after both */}
 
       <div className="absolute top-0 left-0 w-full h-full px-4 flex items-center justify-center  lg:px-20">
         <div className="w-full  flex flex-col items-center justify-center text-center lg:w-3/5">
