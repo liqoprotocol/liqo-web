@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
-import {Outfit} from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -30,13 +31,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<html
-    lang="en"
-    className={`h-full antialiased ${outfit.variable} font-sans`}
->
-      <body className="min-h-full flex flex-col pt-10 relative pb-30">
+    <html
+      lang="en"
+      className={`h-full antialiased ${outfit.variable} font-sans`}
+    >
+      <body className="min-h-screen flex flex-col pt-10">
         <Navbar />
-        {children}</body>
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <Footer />
+      </body>
     </html>
   );
 }
