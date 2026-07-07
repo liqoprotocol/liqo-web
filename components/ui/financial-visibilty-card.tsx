@@ -30,9 +30,8 @@ const FinancialVisibiltyCard = ({ icon, title, className, description, always }:
     return (
         <Card
             ref={ref}
-            className={`group ${inView ? "in-view" : ""} shrink-0 w-[78%] max-w-[320px] snap-start lg:shrink lg:w-[33.33%] lg:max-w-none flex flex-col justify-center items-center relative min-h-72.5 cursor-pointer ${
-                always ? "bg-[#1B1B1B] border-0" : "bg-[#0D0D0D] border border-[#FFFFFF1A]"
-            } hover:bg-[#1B1B1B] rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-600 ${className} pt-10`}
+            className={`group ${inView ? "in-view" : ""} w-full h-full flex flex-col justify-center items-center relative min-h-72.5 cursor-pointer ${always ? "bg-[#1B1B1B] border-0" : "bg-[#0D0D0D] border border-[#FFFFFF1A]"
+                } hover:bg-[#1B1B1B] rounded-sm overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-600 ${className ?? ""} pt-10`}
         >
             {icon}
             <div className="p-4 text-center mt-10">
