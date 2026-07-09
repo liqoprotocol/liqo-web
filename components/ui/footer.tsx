@@ -17,7 +17,7 @@ const Footer = () => {
               <Image
                 src={Logo}
                 alt="Liqo"
-                className="w-24 xl:w-32"
+                className="w-20 xl:w-30"
               />
 
               <div className="mt-16 flex items-center gap-5">
@@ -99,7 +99,7 @@ const Footer = () => {
             <Image
               src={Logo}
               alt="Liqo"
-              className="w-28 md:w-32"
+              className="w-20 md:w-30"
             />
 
             <div className="flex gap-5">

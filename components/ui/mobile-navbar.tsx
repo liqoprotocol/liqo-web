@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import LogoWithText from "../../public/logo-with-text.svg";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -54,7 +55,8 @@ const MobileNavbar = () => {
                 ? "bg-[#0D0D0D]/85 backdrop-blur-xl border-b border-white/10 shadow-lg"
                 : "bg-transparent border-b border-transparent"}`}>
             <nav className="w-full h-16 relative flex flex-row items-center justify-between">
-                <Image src={LogoWithText} alt="Logo" className="h-full w-24" priority />
+                <Link href={'/'}>
+                    <Image src={LogoWithText} alt="Logo" className="h-full w-21" priority /></Link>
 
                 <button
                     onClick={() => setOpen((v) => !v)}
@@ -113,8 +115,12 @@ const MobileNavbar = () => {
                             <Button className="bg-[#4D4D4D] w-full py-5 text-white active:bg-[#333]">
                                 Sign In
                             </Button>
-                            <Button className="bg-white w-full py-5 text-black active:bg-primary-dark/80 active:text-white">
-                                Create account
+                            <Button
+                                render={<Link href="/waitlist" onClick={() => setOpen(false)} />}
+                                nativeButton={false}
+                                className="bg-white w-full py-5 text-black active:bg-primary-dark/80 active:text-white"
+                            >
+                                Join Waitlist
                             </Button>
                         </motion.div>
                     </motion.div>
