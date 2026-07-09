@@ -4,7 +4,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import { siteConfig } from "@/lib/seo/config";
+import { siteConfig, ogImageUrl } from "@/lib/seo/config";
 import { getVerification } from "@/lib/seo/verification";
 import {
   getOrganizationJsonLd,
@@ -66,11 +66,23 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Global Payment & Liquidity Routing Infrastructure`,
     description: siteConfig.description,
     locale: siteConfig.locale,
+    // Absolute URL by hand (not a relative path resolved via metadataBase) —
+    // social crawlers vary in how reliably they resolve relative og:image
+    // URLs, so this removes that variable entirely.
+    images: [
+      {
+        url: ogImageUrl,
+        width: siteConfig.ogImage.width,
+        height: siteConfig.ogImage.height,
+        alt: `${siteConfig.name} — Global Liquidity & Payments Infrastructure`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Global Payment & Liquidity Routing Infrastructure`,
     description: siteConfig.description,
+    images: [ogImageUrl],
     ...(siteConfig.social.twitter ? { site: siteConfig.social.twitter, creator: siteConfig.social.twitter } : {}),
   },
   appleWebApp: {

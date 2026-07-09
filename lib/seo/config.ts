@@ -43,9 +43,18 @@ export const siteConfig = {
     linkedin: "",
   },
   ogImage: {
+    path: "/og-image.png",
     width: 1200,
     height: 630,
   },
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+
+/**
+ * Every route that defines its own `openGraph`/`twitter` metadata object
+ * replaces (not merges with) the root layout's — so `images` has to be
+ * re-included at each route or that page silently loses its social image.
+ * Import this instead of re-deriving the URL by hand.
+ */
+export const ogImageUrl = `${siteConfig.url}${siteConfig.ogImage.path}`;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { MetadataRoute } from "next";
-import { siteConfig } from "./config";
+import { siteConfig, ogImageUrl } from "./config";
 
 /**
  * Blog readiness scaffolding (see AGENTS sprint task 25). No blog exists
@@ -33,11 +33,25 @@ export function getBlogPostMetadata(post: BlogPostMeta): Metadata {
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
+      // Falls back to the site-wide social image. Swap in a per-post image
+      // (e.g. a generated opengraph-image.tsx keyed on post title) once
+      // that's worth the build complexity — a route that defines its own
+      // `openGraph` must always include `images` itself or it loses the
+      // one inherited from the root layout.
+      images: [
+        {
+          url: ogImageUrl,
+          width: siteConfig.ogImage.width,
+          height: siteConfig.ogImage.height,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: [ogImageUrl],
     },
   };
 }
