@@ -31,7 +31,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Global Payment & Liquidity Routing Infrastructure`,
+    default: `${siteConfig.name} — Global Payments Infrastructure for Modern Businesses`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Global Payment & Liquidity Routing Infrastructure`,
+    title: `${siteConfig.name} — Global Payments Infrastructure for Modern Businesses`,
     description: siteConfig.description,
     locale: siteConfig.locale,
     // Absolute URL by hand (not a relative path resolved via metadataBase) —
@@ -74,13 +74,13 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: siteConfig.ogImage.width,
         height: siteConfig.ogImage.height,
-        alt: `${siteConfig.name} — Global Liquidity & Payments Infrastructure`,
+        alt: `${siteConfig.name} — Global Payments Infrastructure for Modern Businesses`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Global Payment & Liquidity Routing Infrastructure`,
+    title: `${siteConfig.name} — Global Payments Infrastructure for Modern Businesses`,
     description: siteConfig.description,
     images: [ogImageUrl],
     ...(siteConfig.social.twitter ? { site: siteConfig.social.twitter, creator: siteConfig.social.twitter } : {}),

@@ -4,7 +4,7 @@ import WaitlistSection from "@/components/waitlist/WaitlistSection";
 
 const title = "Join the Waitlist";
 const description =
-  "Be among the first developers and businesses to experience the future of global liquidity infrastructure. Join the Liqo waitlist for early access.";
+  "Be among the first businesses to experience Global Payments Infrastructure for Modern Businesses. Join the Liqo waitlist for early access.";
 
 export const metadata: Metadata = {
   title,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: siteConfig.ogImage.width,
         height: siteConfig.ogImage.height,
-        alt: `${siteConfig.name} — Global Liquidity & Payments Infrastructure`,
+        alt: `${siteConfig.name} — Global Payments Infrastructure for Modern Businesses`,
       },
     ],
   },

@@ -43,8 +43,8 @@ const WaitlistSection = () => {
           variants={rise}
           className="max-w-xl text-center text-sm text-gray-400 lg:text-base"
         >
-          Be among the first developers and businesses to experience the future of global
-          liquidity infrastructure.
+          Be among the first businesses to experience Global Payments
+          Infrastructure for Modern Businesses.
         </motion.p>
       </motion.div>
 

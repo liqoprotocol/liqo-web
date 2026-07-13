@@ -11,9 +11,9 @@ export const siteConfig = {
   url: "https://liqo.network",
   tagline: "Move money globally without the technical heavy lifting.",
   description:
-    "Liqo is developer-first liquidity routing infrastructure for accepting payments in crypto or fiat from anywhere in the world and settling in your preferred currency through a single API.",
+    "Liqo is Global Payments Infrastructure for Modern Businesses — accept payments in fiat, stablecoins, or crypto from anywhere in the world and settle in your preferred currency through a single API.",
   keywords: [
-    "liquidity routing infrastructure",
+    "global payments infrastructure",
     "payment orchestration API",
     "crypto payments API",
     "fiat settlement infrastructure",

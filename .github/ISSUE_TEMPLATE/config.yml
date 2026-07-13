@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔐 Report a Security Vulnerability
+    url: https://github.com/liqoprotocol/liqo-landing/security/advisories/new
+    about: Please report security issues privately via GitHub Security Advisories. Do not open a public issue. See SECURITY.md.
+  - name: 💬 Questions & Discussions
+    url: https://github.com/liqoprotocol/liqo-landing/discussions
+    about: Ask questions, share ideas, and discuss Liqo with the community.
+  - name: 🌐 Join the Waitlist
+    url: https://liqo.network/waitlist
+    about: Get early access to Liqo.
