@@ -72,8 +72,8 @@ const Footer = () => {
               </h3>
 
               <ul className="space-y-4 text-sm text-white/70">
-                <li><Link href="#">API Documentation</Link></li>
-                <li><Link href="#">API Reference</Link></li>
+                <li><Link href="https://docs.liqo.network" target="_blank" rel="noopener noreferrer">API Documentation</Link></li>
+                <li><Link href="https://docs.liqo.network/docs/api-reference" target="_blank" rel="noopener noreferrer">API Reference</Link></li>
                 <li><Link href="#">Sandbox Environment</Link></li>
               </ul>
             </div>
@@ -153,8 +153,8 @@ const Footer = () => {
               </h3>
 
               <ul className="space-y-4 text-base md:text-lg text-white/70">
-                <li><Link href="#">API Documentation</Link></li>
-                <li><Link href="#">API Reference</Link></li>
+                <li><Link href="https://docs.liqo.network" target="_blank" rel="noopener noreferrer">API Documentation</Link></li>
+                <li><Link href="https://docs.liqo.network/docs/api-reference" target="_blank" rel="noopener noreferrer">API Reference</Link></li>
                 <li><Link href="#">Sandbox Environment</Link></li>
               </ul>
             </div>

@@ -59,7 +59,9 @@ const DeveloperExperience = () => {
 
           <motion.div variants={rise}>
             <a
-              href="/docs"
+              href="https://docs.liqo.network"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group mt-5 text-white underline cursor-pointer text-left text-sm inline-flex items-center gap-0.5"
             >
               Read Documentation
